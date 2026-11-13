@@ -7266,17 +7266,17 @@ public final class DiadocMessage_GetApiProtos {
         getMessageFromBoxIdBytes();
 
     /**
-     * <code>required string MessageToBoxId = 6;</code>
+     * <code>optional string MessageToBoxId = 6;</code>
      * @return Whether the messageToBoxId field is set.
      */
     boolean hasMessageToBoxId();
     /**
-     * <code>required string MessageToBoxId = 6;</code>
+     * <code>optional string MessageToBoxId = 6;</code>
      * @return The messageToBoxId.
      */
     java.lang.String getMessageToBoxId();
     /**
-     * <code>required string MessageToBoxId = 6;</code>
+     * <code>optional string MessageToBoxId = 6;</code>
      * @return The bytes for messageToBoxId.
      */
     com.google.protobuf.ByteString
@@ -7657,7 +7657,7 @@ public final class DiadocMessage_GetApiProtos {
     @SuppressWarnings("serial")
     private volatile java.lang.Object messageToBoxId_ = "";
     /**
-     * <code>required string MessageToBoxId = 6;</code>
+     * <code>optional string MessageToBoxId = 6;</code>
      * @return Whether the messageToBoxId field is set.
      */
     @java.lang.Override
@@ -7665,7 +7665,7 @@ public final class DiadocMessage_GetApiProtos {
       return ((bitField0_ & 0x00000020) != 0);
     }
     /**
-     * <code>required string MessageToBoxId = 6;</code>
+     * <code>optional string MessageToBoxId = 6;</code>
      * @return The messageToBoxId.
      */
     @java.lang.Override
@@ -7684,7 +7684,7 @@ public final class DiadocMessage_GetApiProtos {
       }
     }
     /**
-     * <code>required string MessageToBoxId = 6;</code>
+     * <code>optional string MessageToBoxId = 6;</code>
      * @return The bytes for messageToBoxId.
      */
     @java.lang.Override
@@ -7970,10 +7970,6 @@ public final class DiadocMessage_GetApiProtos {
         return false;
       }
       if (!hasMessageFromBoxId()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
-      if (!hasMessageToBoxId()) {
         memoizedIsInitialized = 0;
         return false;
       }
@@ -8588,9 +8584,6 @@ public final class DiadocMessage_GetApiProtos {
         if (!hasMessageFromBoxId()) {
           return false;
         }
-        if (!hasMessageToBoxId()) {
-          return false;
-        }
         if (!hasLockMode()) {
           return false;
         }
@@ -9077,14 +9070,14 @@ public final class DiadocMessage_GetApiProtos {
 
       private java.lang.Object messageToBoxId_ = "";
       /**
-       * <code>required string MessageToBoxId = 6;</code>
+       * <code>optional string MessageToBoxId = 6;</code>
        * @return Whether the messageToBoxId field is set.
        */
       public boolean hasMessageToBoxId() {
         return ((bitField0_ & 0x00000020) != 0);
       }
       /**
-       * <code>required string MessageToBoxId = 6;</code>
+       * <code>optional string MessageToBoxId = 6;</code>
        * @return The messageToBoxId.
        */
       public java.lang.String getMessageToBoxId() {
@@ -9102,7 +9095,7 @@ public final class DiadocMessage_GetApiProtos {
         }
       }
       /**
-       * <code>required string MessageToBoxId = 6;</code>
+       * <code>optional string MessageToBoxId = 6;</code>
        * @return The bytes for messageToBoxId.
        */
       public com.google.protobuf.ByteString
@@ -9119,7 +9112,7 @@ public final class DiadocMessage_GetApiProtos {
         }
       }
       /**
-       * <code>required string MessageToBoxId = 6;</code>
+       * <code>optional string MessageToBoxId = 6;</code>
        * @param value The messageToBoxId to set.
        * @return This builder for chaining.
        */
@@ -9132,7 +9125,7 @@ public final class DiadocMessage_GetApiProtos {
         return this;
       }
       /**
-       * <code>required string MessageToBoxId = 6;</code>
+       * <code>optional string MessageToBoxId = 6;</code>
        * @return This builder for chaining.
        */
       public Builder clearMessageToBoxId() {
@@ -9142,7 +9135,7 @@ public final class DiadocMessage_GetApiProtos {
         return this;
       }
       /**
-       * <code>required string MessageToBoxId = 6;</code>
+       * <code>optional string MessageToBoxId = 6;</code>
        * @param value The bytes for messageToBoxId to set.
        * @return This builder for chaining.
        */
@@ -31811,7 +31804,7 @@ public final class DiadocMessage_GetApiProtos {
       "plate\022\021\n\tMessageId\030\001 \002(\t\022\026\n\016TimestampTic" +
       "ks\030\002 \002(\020\022\021\n\tFromBoxId\030\003 \002(\t\022\017\n\007ToBoxId\030\004" +
       " \002(\t\022\030\n\020MessageFromBoxId\030\005 \002(\t\022\026\n\016Messag" +
-      "eToBoxId\030\006 \002(\t\0221\n\010Entities\030\007 \003(\0132\037.Diado" +
+      "eToBoxId\030\006 \001(\t\0221\n\010Entities\030\007 \003(\0132\037.Diado" +
       "c.Api.Proto.Events.Entity\022\030\n\tIsDeleted\030\010" +
       " \001(\010:\005false\022\035\n\025MessageToDepartmentId\030\t \001" +
       "(\t\022,\n\010LockMode\030\n \002(\0162\032.Diadoc.Api.Proto." +

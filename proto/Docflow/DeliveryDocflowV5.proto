@@ -1,0 +1,20 @@
+import "Timestamp.proto";
+
+package Diadoc.Api.Proto.Docflow;
+
+option java_outer_classname = "DeliveryDocflowV5Protos";
+
+message DeliveryDocflowV5
+{
+	required DeliveryStatusV5 Status = 1;
+	optional Timestamp SentAt = 2;
+	optional Timestamp DeliveredAt = 3;
+}
+
+enum DeliveryStatusV5
+{
+	DeliveryStatusUnknown = 0;
+	DeliveryStatusNotReady = 1;
+	DeliveryStatusDelivered = 2;
+	DeliveryStatusFailed = 3;
+}

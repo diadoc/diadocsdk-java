@@ -246,6 +246,23 @@ public final class OuterDocflowStatusProtos {
      */
     Diadoc.Api.Proto.OuterDocflows.OuterDocflowStatusProtos.StatusDetailOrBuilder getDetailsOrBuilder(
         int index);
+
+    /**
+     * <code>optional string EntityId = 6;</code>
+     * @return Whether the entityId field is set.
+     */
+    boolean hasEntityId();
+    /**
+     * <code>optional string EntityId = 6;</code>
+     * @return The entityId.
+     */
+    java.lang.String getEntityId();
+    /**
+     * <code>optional string EntityId = 6;</code>
+     * @return The bytes for entityId.
+     */
+    com.google.protobuf.ByteString
+        getEntityIdBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.OuterDocflows.Status}
@@ -274,6 +291,7 @@ public final class OuterDocflowStatusProtos {
       type_ = 0;
       description_ = "";
       details_ = java.util.Collections.emptyList();
+      entityId_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -496,6 +514,55 @@ public final class OuterDocflowStatusProtos {
       return details_.get(index);
     }
 
+    public static final int ENTITYID_FIELD_NUMBER = 6;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object entityId_ = "";
+    /**
+     * <code>optional string EntityId = 6;</code>
+     * @return Whether the entityId field is set.
+     */
+    @java.lang.Override
+    public boolean hasEntityId() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string EntityId = 6;</code>
+     * @return The entityId.
+     */
+    @java.lang.Override
+    public java.lang.String getEntityId() {
+      java.lang.Object ref = entityId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          entityId_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string EntityId = 6;</code>
+     * @return The bytes for entityId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getEntityIdBytes() {
+      java.lang.Object ref = entityId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        entityId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -537,6 +604,9 @@ public final class OuterDocflowStatusProtos {
       for (int i = 0; i < details_.size(); i++) {
         output.writeMessage(5, details_.get(i));
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 6, entityId_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -562,6 +632,9 @@ public final class OuterDocflowStatusProtos {
       for (int i = 0; i < details_.size(); i++) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(5, details_.get(i));
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(6, entityId_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -599,6 +672,11 @@ public final class OuterDocflowStatusProtos {
       }
       if (!getDetailsList()
           .equals(other.getDetailsList())) return false;
+      if (hasEntityId() != other.hasEntityId()) return false;
+      if (hasEntityId()) {
+        if (!getEntityId()
+            .equals(other.getEntityId())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -629,6 +707,10 @@ public final class OuterDocflowStatusProtos {
       if (getDetailsCount() > 0) {
         hash = (37 * hash) + DETAILS_FIELD_NUMBER;
         hash = (53 * hash) + getDetailsList().hashCode();
+      }
+      if (hasEntityId()) {
+        hash = (37 * hash) + ENTITYID_FIELD_NUMBER;
+        hash = (53 * hash) + getEntityId().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -772,6 +854,7 @@ public final class OuterDocflowStatusProtos {
           detailsBuilder_.clear();
         }
         bitField0_ = (bitField0_ & ~0x00000010);
+        entityId_ = "";
         return this;
       }
 
@@ -835,6 +918,10 @@ public final class OuterDocflowStatusProtos {
           result.description_ = description_;
           to_bitField0_ |= 0x00000008;
         }
+        if (((from_bitField0_ & 0x00000020) != 0)) {
+          result.entityId_ = entityId_;
+          to_bitField0_ |= 0x00000010;
+        }
         result.bitField0_ |= to_bitField0_;
       }
 
@@ -893,6 +980,11 @@ public final class OuterDocflowStatusProtos {
               detailsBuilder_.addAllMessages(other.details_);
             }
           }
+        }
+        if (other.hasEntityId()) {
+          entityId_ = other.entityId_;
+          bitField0_ |= 0x00000020;
+          onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
         onChanged();
@@ -969,6 +1061,11 @@ public final class OuterDocflowStatusProtos {
                 }
                 break;
               } // case 42
+              case 50: {
+                entityId_ = input.readBytes();
+                bitField0_ |= 0x00000020;
+                break;
+              } // case 50
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1506,6 +1603,86 @@ public final class OuterDocflowStatusProtos {
           details_ = null;
         }
         return detailsBuilder_;
+      }
+
+      private java.lang.Object entityId_ = "";
+      /**
+       * <code>optional string EntityId = 6;</code>
+       * @return Whether the entityId field is set.
+       */
+      public boolean hasEntityId() {
+        return ((bitField0_ & 0x00000020) != 0);
+      }
+      /**
+       * <code>optional string EntityId = 6;</code>
+       * @return The entityId.
+       */
+      public java.lang.String getEntityId() {
+        java.lang.Object ref = entityId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            entityId_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string EntityId = 6;</code>
+       * @return The bytes for entityId.
+       */
+      public com.google.protobuf.ByteString
+          getEntityIdBytes() {
+        java.lang.Object ref = entityId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          entityId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string EntityId = 6;</code>
+       * @param value The entityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityId(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        entityId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string EntityId = 6;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearEntityId() {
+        entityId_ = getDefaultInstance().getEntityId();
+        bitField0_ = (bitField0_ & ~0x00000020);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string EntityId = 6;</code>
+       * @param value The bytes for entityId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setEntityIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        entityId_ = value;
+        bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
       }
 
       // @@protoc_insertion_point(builder_scope:Diadoc.Api.Proto.OuterDocflows.Status)
@@ -2298,16 +2475,17 @@ public final class OuterDocflowStatusProtos {
   static {
     java.lang.String[] descriptorData = {
       "\n&OuterDocflows/OuterDocflowStatus.proto" +
-      "\022\036Diadoc.Api.Proto.OuterDocflows\"\302\001\n\006Sta" +
+      "\022\036Diadoc.Api.Proto.OuterDocflows\"\324\001\n\006Sta" +
       "tus\022\017\n\007NamedId\030\001 \002(\t\022\024\n\014FriendlyName\030\002 \002" +
       "(\t\022=\n\004Type\030\003 \002(\0162/.Diadoc.Api.Proto.Oute" +
       "rDocflows.OuterStatusType\022\023\n\013Description" +
       "\030\004 \001(\t\022=\n\007Details\030\005 \003(\0132,.Diadoc.Api.Pro" +
-      "to.OuterDocflows.StatusDetail\"*\n\014StatusD" +
-      "etail\022\014\n\004Code\030\001 \001(\t\022\014\n\004Text\030\002 \001(\t*U\n\017Out" +
-      "erStatusType\022\021\n\rUnknownStatus\020\000\022\n\n\006Norma" +
-      "l\020\001\022\013\n\007Success\020\002\022\013\n\007Warning\020\003\022\t\n\005Error\020\004" +
-      "B\032B\030OuterDocflowStatusProtos"
+      "to.OuterDocflows.StatusDetail\022\020\n\010EntityI" +
+      "d\030\006 \001(\t\"*\n\014StatusDetail\022\014\n\004Code\030\001 \001(\t\022\014\n" +
+      "\004Text\030\002 \001(\t*U\n\017OuterStatusType\022\021\n\rUnknow" +
+      "nStatus\020\000\022\n\n\006Normal\020\001\022\013\n\007Success\020\002\022\013\n\007Wa" +
+      "rning\020\003\022\t\n\005Error\020\004B\032B\030OuterDocflowStatus" +
+      "Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2318,7 +2496,7 @@ public final class OuterDocflowStatusProtos {
     internal_static_Diadoc_Api_Proto_OuterDocflows_Status_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_OuterDocflows_Status_descriptor,
-        new java.lang.String[] { "NamedId", "FriendlyName", "Type", "Description", "Details", });
+        new java.lang.String[] { "NamedId", "FriendlyName", "Type", "Description", "Details", "EntityId", });
     internal_static_Diadoc_Api_Proto_OuterDocflows_StatusDetail_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_OuterDocflows_StatusDetail_fieldAccessorTable = new
