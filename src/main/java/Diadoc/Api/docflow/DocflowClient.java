@@ -26,7 +26,7 @@ public class DocflowClient {
 
     /**
      * @deprecated
-     * Use {@link #searchDocflowsV5(String, SearchDocflowsRequest)}
+     * Use {@link #searchDocflowsV4(String, SearchDocflowsRequest)}
      */
     public SearchDocflowsResponse searchDocflows(String boxId, SearchDocflowsRequest searchDocflowsRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
@@ -47,7 +47,7 @@ public class DocflowClient {
 
     /**
      * @deprecated
-     * Use {@link #getDocflowsByPacketIdV5(String, GetDocflowsByPacketIdRequest)}
+     * Use {@link #getDocflowsByPacketIdV4(String, GetDocflowsByPacketIdRequest)}
      */
     @Deprecated
     public GetDocflowsByPacketIdResponse getDocflowsByPacketId(String boxId, GetDocflowsByPacketIdRequest packetIdRequest) throws DiadocSdkException {
@@ -69,7 +69,7 @@ public class DocflowClient {
 
     /**
      * @deprecated
-     * Use {@link #getDocflowsV5(String, GetDocflowBatchRequest)}
+     * Use {@link #getDocflowsV4(String, GetDocflowBatchRequest)}
      */
     public GetDocflowBatchResponseV3 getDocflows(String boxId, GetDocflowBatchRequest getDocflowBatchRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
@@ -88,11 +88,6 @@ public class DocflowClient {
         }
     }
 
-    /**
-     * @deprecated
-     * Use {@link #getDocflowsV5(String, GetDocflowBatchRequest)}
-     */
-    @Deprecated
     public GetDocflowBatchResponseV4 getDocflowsV4(String boxId, GetDocflowBatchRequest getDocflowBatchRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
@@ -129,7 +124,7 @@ public class DocflowClient {
 
     /**
      * @deprecated
-     * Use {@link #getDocflowEventsV5(String, GetDocflowEventsRequest)}
+     * Use {@link #getDocflowEventsV4(String, GetDocflowEventsRequest)}
      */
     public GetDocflowEventsResponseV3 getDocflowEvents(String boxId, GetDocflowEventsRequest getDocflowEventsRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
@@ -148,11 +143,6 @@ public class DocflowClient {
         }
     }
 
-    /**
-     * @deprecated
-     * Use {@link #getDocflowEventsV5(String, GetDocflowEventsRequest)}
-     */
-    @Deprecated
     public GetDocflowEventsResponseV4 getDocflowEventsV4(String boxId, GetDocflowEventsRequest getDocflowEventsRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
@@ -189,7 +179,7 @@ public class DocflowClient {
 
     /**
      * @deprecated
-     * Use {@link #searchDocflowsV5(String, SearchDocflowsRequest)}
+     * Use {@link #searchDocflowsV4(String, SearchDocflowsRequest)}
      */
     public SearchDocflowsResponseV3 searchDocflowsV3(String boxId, SearchDocflowsRequest docflowsRequest) throws IOException, DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
@@ -208,11 +198,6 @@ public class DocflowClient {
         }
     }
 
-    /**
-     * @deprecated
-     * Use {@link #searchDocflowsV5(String, SearchDocflowsRequest)}
-     */
-    @Deprecated
     public SearchDocflowsResponseV4 searchDocflowsV4(String boxId, SearchDocflowsRequest docflowsRequest) throws IOException, DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
@@ -230,7 +215,7 @@ public class DocflowClient {
         }
     }
 
-    public SearchDocflowsResponseV5 searchDocflowsV5(String boxId, SearchDocflowsRequest docflowsRequest) throws IOException, DiadocSdkException {
+    public SearchDocflowsResponseV5 searchDocflowsV5(String boxId, SearchDocflowsRequest docflowsRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
         }
@@ -249,7 +234,7 @@ public class DocflowClient {
 
     /**
      * @deprecated
-     * Use {@link #getDocflowsByPacketIdV5(String, GetDocflowsByPacketIdRequest)}
+     * Use {@link #getDocflowsByPacketIdV4(String, GetDocflowsByPacketIdRequest)}
      */
     public GetDocflowsByPacketIdResponseV3 getDocflowsByPacketIdV3(String boxId, GetDocflowsByPacketIdRequest docflowsByPacketIdRequest) throws IOException, DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
@@ -268,11 +253,6 @@ public class DocflowClient {
         }
     }
 
-    /**
-     * @deprecated
-     * Use {@link #getDocflowsByPacketIdV5(String, GetDocflowsByPacketIdRequest)}
-     */
-    @Deprecated
     public GetDocflowsByPacketIdResponseV4 getDocflowsByPacketIdV4(String boxId, GetDocflowsByPacketIdRequest docflowsByPacketIdRequest) throws IOException, DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
@@ -290,7 +270,7 @@ public class DocflowClient {
         }
     }
 
-    public GetDocflowsByPacketIdResponseV5 getDocflowsByPacketIdV5(String boxId, GetDocflowsByPacketIdRequest docflowsByPacketIdRequest) throws IOException, DiadocSdkException {
+    public GetDocflowsByPacketIdResponseV5 getDocflowsByPacketIdV5(String boxId, GetDocflowsByPacketIdRequest docflowsByPacketIdRequest) throws DiadocSdkException {
         if (Tools.isNullOrEmpty(boxId)) {
             throw new IllegalArgumentException("boxId");
         }

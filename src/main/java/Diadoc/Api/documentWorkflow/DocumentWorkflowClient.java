@@ -18,11 +18,6 @@ public class DocumentWorkflowClient {
         this.diadocHttpClient = diadocHttpClient;
     }
 
-    /**
-     * @deprecated
-     * Use {@link #getWorkflowsSettingsV3(String)}
-     */
-    @Deprecated
     public DocumentWorkflowSettingsListV2 getWorkflowsSettings(String boxId) throws DiadocSdkException {
         if (boxId == null) {
             throw new IllegalArgumentException("boxId");

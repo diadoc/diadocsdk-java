@@ -12542,17 +12542,17 @@ public final class DocflowV5Protos {
       com.google.protobuf.MessageOrBuilder {
 
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
      * @return Whether the requester field is set.
      */
     boolean hasRequester();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
      * @return The requester.
      */
     Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 getRequester();
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
      */
     Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder getRequesterOrBuilder();
 
@@ -12710,7 +12710,7 @@ public final class DocflowV5Protos {
     public static final int REQUESTER_FIELD_NUMBER = 1;
     private Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 requester_;
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
      * @return Whether the requester field is set.
      */
     @java.lang.Override
@@ -12718,7 +12718,7 @@ public final class DocflowV5Protos {
       return ((bitField0_ & 0x00000001) != 0);
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
      * @return The requester.
      */
     @java.lang.Override
@@ -12726,7 +12726,7 @@ public final class DocflowV5Protos {
       return requester_ == null ? Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.getDefaultInstance() : requester_;
     }
     /**
-     * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+     * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
      */
     @java.lang.Override
     public Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder getRequesterOrBuilder() {
@@ -12969,10 +12969,6 @@ public final class DocflowV5Protos {
       if (isInitialized == 1) return true;
       if (isInitialized == 0) return false;
 
-      if (!hasRequester()) {
-        memoizedIsInitialized = 0;
-        return false;
-      }
       if (!hasIsFinished()) {
         memoizedIsInitialized = 0;
         return false;
@@ -12981,9 +12977,11 @@ public final class DocflowV5Protos {
         memoizedIsInitialized = 0;
         return false;
       }
-      if (!getRequester().isInitialized()) {
-        memoizedIsInitialized = 0;
-        return false;
+      if (hasRequester()) {
+        if (!getRequester().isInitialized()) {
+          memoizedIsInitialized = 0;
+          return false;
+        }
       }
       for (int i = 0; i < getRecipientDocflowsCount(); i++) {
         if (!getRecipientDocflows(i).isInitialized()) {
@@ -13489,17 +13487,16 @@ public final class DocflowV5Protos {
 
       @java.lang.Override
       public final boolean isInitialized() {
-        if (!hasRequester()) {
-          return false;
-        }
         if (!hasIsFinished()) {
           return false;
         }
         if (!hasAmendmentFlags()) {
           return false;
         }
-        if (!getRequester().isInitialized()) {
-          return false;
+        if (hasRequester()) {
+          if (!getRequester().isInitialized()) {
+            return false;
+          }
         }
         for (int i = 0; i < getRecipientDocflowsCount(); i++) {
           if (!getRecipientDocflows(i).isInitialized()) {
@@ -13610,14 +13607,14 @@ public final class DocflowV5Protos {
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.Builder, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder> requesterBuilder_;
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
        * @return Whether the requester field is set.
        */
       public boolean hasRequester() {
         return ((bitField0_ & 0x00000001) != 0);
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
        * @return The requester.
        */
       public Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 getRequester() {
@@ -13628,7 +13625,7 @@ public final class DocflowV5Protos {
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
        */
       public Builder setRequester(Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 value) {
         if (requesterBuilder_ == null) {
@@ -13644,7 +13641,7 @@ public final class DocflowV5Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
        */
       public Builder setRequester(
           Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.Builder builderForValue) {
@@ -13658,7 +13655,7 @@ public final class DocflowV5Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
        */
       public Builder mergeRequester(Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2 value) {
         if (requesterBuilder_ == null) {
@@ -13679,7 +13676,7 @@ public final class DocflowV5Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
        */
       public Builder clearRequester() {
         bitField0_ = (bitField0_ & ~0x00000001);
@@ -13692,7 +13689,7 @@ public final class DocflowV5Protos {
         return this;
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
        */
       public Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.Builder getRequesterBuilder() {
         bitField0_ |= 0x00000001;
@@ -13700,7 +13697,7 @@ public final class DocflowV5Protos {
         return getRequesterFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
        */
       public Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder getRequesterOrBuilder() {
         if (requesterBuilder_ != null) {
@@ -13711,7 +13708,7 @@ public final class DocflowV5Protos {
         }
       }
       /**
-       * <code>required .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
+       * <code>optional .Diadoc.Api.Proto.Documents.DocumentParticipantV2 Requester = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2.Builder, Diadoc.Api.Proto.Documents.DocumentParticipantV2Protos.DocumentParticipantV2OrBuilder> 
@@ -17035,7 +17032,7 @@ public final class DocflowV5Protos {
       "ow.DeliveryDocflowV5\022E\n\014Confirmation\030\004 \001" +
       "(\0132/.Diadoc.Api.Proto.Docflow.Confirmati" +
       "onDocflowV5\"\256\003\n\031AmendmentRequestDocflowV" +
-      "5\022D\n\tRequester\030\001 \002(\01321.Diadoc.Api.Proto." +
+      "5\022D\n\tRequester\030\001 \001(\01321.Diadoc.Api.Proto." +
       "Documents.DocumentParticipantV2\022U\n\021Recip" +
       "ientDocflows\030\002 \003(\0132:.Diadoc.Api.Proto.Do" +
       "cflow.AmendmentRequestRecipientDocflow\022\022" +
