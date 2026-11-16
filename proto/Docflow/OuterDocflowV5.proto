@@ -1,0 +1,14 @@
+import "Docflow/DocflowV3.proto";
+
+package Diadoc.Api.Proto.Docflow;
+
+option java_outer_classname = "OuterDocflowV5Protos";
+
+message OuterDocflowV5
+{
+	required string DocflowNamedId = 1;
+	required string ParentEntityId = 2;
+	required string LatestStatusEntityId = 3;
+	required string DocflowFriendlyName = 4;
+	repeated StatusEntity StatusEntities = 5;
+}

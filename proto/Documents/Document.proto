@@ -10,6 +10,7 @@ import "Documents/InvoiceDocument.proto";
 import "Documents/NonformalizedDocument.proto";
 import "Documents/UnilateralDocument.proto";
 import "Documents/UniversalTransferDocument.proto";
+import "Documents/DocumentParticipantV2.proto";
 import "ResolutionTarget.proto";
 import "ForwardDocumentEvent.proto";
 import "Events/DiadocMessage-PostApi.proto";
@@ -103,8 +104,27 @@ message Document {
 	required DocflowStatusV3 DocflowStatus = 80;
 	optional TtGisFixationCancellationStatus TtGisFixationCancellationStatus = 81 [default = TtGisFixationCancellationStatusNone];
 	optional bool HasUnreadOutOfWorkflowUniversalMessages = 82 [default = true];
+	repeated DocumentParticipantInfo Participants = 83;
 	optional AmendmentRequestMetadata RecipientResponseAmendmentRequestMetadata = 84;
+	repeated TitleDocflowSummary TitleDocflows = 85;
+}
 
+message TitleDocflowSummary {
+	required int32 TitleIndex = 1;
+	optional string TitleEntityId = 2;
+	optional string TitleAttachmentFilename = 3;
+	optional string TitleDisplayFilename = 4;
+	required DocumentParticipantV2 Author = 5;
+	required SenderSignatureStatus AuthorSignatureStatus = 6;
+	repeated TitleParticipantDocflowSummary ParticipantDocflows = 7;
+}
+
+message TitleParticipantDocflowSummary {
+	required DocumentParticipantV2 Participant = 1;
+	required RecipientResponseStatus ResponseStatus = 2;
+	optional string ResponseEntityId = 3;
+	required GeneralReceiptStatus ReceiptStatus = 4;
+	optional string ReceiptEntityId = 5;
 }
 
 message LastOuterDocflow {
@@ -205,6 +225,11 @@ enum RecipientResponseStatus {
 message Origin {
 	required MessageType MessageType = 1;
 	required string MessageId = 2;
+}
+
+message DocumentParticipantInfo {
+	required DocumentParticipantV2 Participant = 1;
+	optional RecipientResponseStatus RecipientResponseStatus = 2;
 }
 
 enum MessageType {

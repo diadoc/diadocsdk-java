@@ -70,14 +70,14 @@ message Template {
     required string FromBoxId = 3;
     required string ToBoxId = 4;
     required string MessageFromBoxId = 5;
-    required string MessageToBoxId = 6;
+    optional string MessageToBoxId = 6;
     repeated Entity Entities = 7;
     optional bool IsDeleted = 8 [default = false];
     optional string MessageToDepartmentId = 9;
     required LockMode LockMode = 10;
     optional string MessageProxyBoxId = 11;
     optional string MessageProxyDepartmentId = 12;
-	optional bool IsReusable = 13 [default = false];
+    optional bool IsReusable = 13 [default = false];
 }
 
 message MessagePatch {

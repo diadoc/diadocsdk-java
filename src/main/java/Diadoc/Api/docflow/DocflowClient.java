@@ -14,6 +14,7 @@ import java.net.URISyntaxException;
 import static Diadoc.Api.Proto.Docflow.DocflowApiProtos.*;
 import static Diadoc.Api.Proto.Docflow.DocflowApiV3Protos.*;
 import static Diadoc.Api.Proto.Docflow.DocflowApiV4Protos.*;
+import static Diadoc.Api.Proto.Docflow.DocflowApiV5Protos.*;
 
 public class DocflowClient {
     private DiadocHttpClient diadocHttpClient;
@@ -104,6 +105,23 @@ public class DocflowClient {
         }
     }
 
+    public GetDocflowBatchResponseV5 getDocflowsV5(String boxId, GetDocflowBatchRequest getDocflowBatchRequest) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(boxId)) {
+            throw new IllegalArgumentException("boxId");
+        }
+        try {
+            var request = RequestBuilder.post(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V5/GetDocflows")
+                            .addParameter("boxId", boxId)
+                            .build())
+                    .setEntity(new ByteArrayEntity(getDocflowBatchRequest.toByteArray()));
+            return GetDocflowBatchResponseV5.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
     /**
      * @deprecated
      * Use {@link #getDocflowEventsV4(String, GetDocflowEventsRequest)}
@@ -137,6 +155,23 @@ public class DocflowClient {
                             .build())
                     .setEntity(new ByteArrayEntity(getDocflowEventsRequest.toByteArray()));
             return GetDocflowEventsResponseV4.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public GetDocflowEventsResponseV5 getDocflowEventsV5(String boxId, GetDocflowEventsRequest getDocflowEventsRequest) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(boxId)) {
+            throw new IllegalArgumentException("boxId");
+        }
+        try {
+            var request = RequestBuilder.post(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V5/GetDocflowEvents")
+                            .addParameter("boxId", boxId)
+                            .build())
+                    .setEntity(new ByteArrayEntity(getDocflowEventsRequest.toByteArray()));
+            return GetDocflowEventsResponseV5.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
@@ -180,6 +215,23 @@ public class DocflowClient {
         }
     }
 
+    public SearchDocflowsResponseV5 searchDocflowsV5(String boxId, SearchDocflowsRequest docflowsRequest) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(boxId)) {
+            throw new IllegalArgumentException("boxId");
+        }
+        try {
+            var request = RequestBuilder.post(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V5/SearchDocflows")
+                            .addParameter("boxId", boxId)
+                            .build())
+                    .setEntity(new ByteArrayEntity(docflowsRequest.toByteArray()));
+            return SearchDocflowsResponseV5.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
     /**
      * @deprecated
      * Use {@link #getDocflowsByPacketIdV4(String, GetDocflowsByPacketIdRequest)}
@@ -213,6 +265,23 @@ public class DocflowClient {
                             .build())
                     .setEntity(new ByteArrayEntity(docflowsByPacketIdRequest.toByteArray()));
             return GetDocflowsByPacketIdResponseV4.parseFrom(diadocHttpClient.performRequest(request));
+        } catch (URISyntaxException | IOException e) {
+            throw new DiadocSdkException(e);
+        }
+    }
+
+    public GetDocflowsByPacketIdResponseV5 getDocflowsByPacketIdV5(String boxId, GetDocflowsByPacketIdRequest docflowsByPacketIdRequest) throws DiadocSdkException {
+        if (Tools.isNullOrEmpty(boxId)) {
+            throw new IllegalArgumentException("boxId");
+        }
+        try {
+            var request = RequestBuilder.post(
+                    new URIBuilder(diadocHttpClient.getBaseUrl())
+                            .setPath("/V5/GetDocflowsByPacketId")
+                            .addParameter("boxId", boxId)
+                            .build())
+                    .setEntity(new ByteArrayEntity(docflowsByPacketIdRequest.toByteArray()));
+            return GetDocflowsByPacketIdResponseV5.parseFrom(diadocHttpClient.performRequest(request));
         } catch (URISyntaxException | IOException e) {
             throw new DiadocSdkException(e);
         }
