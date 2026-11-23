@@ -131,6 +131,23 @@ public final class DocumentTypeDescriptionV3Protos {
      */
     com.google.protobuf.ByteString
         getUniversalMessagesStartDateBytes();
+
+    /**
+     * <code>optional string DocumentClass = 11;</code>
+     * @return Whether the documentClass field is set.
+     */
+    boolean hasDocumentClass();
+    /**
+     * <code>optional string DocumentClass = 11;</code>
+     * @return The documentClass.
+     */
+    java.lang.String getDocumentClass();
+    /**
+     * <code>optional string DocumentClass = 11;</code>
+     * @return The bytes for documentClass.
+     */
+    com.google.protobuf.ByteString
+        getDocumentClassBytes();
   }
   /**
    * Protobuf type {@code Diadoc.Api.Proto.Documents.Types.DocumentTypeDescriptionV3}
@@ -159,6 +176,7 @@ public final class DocumentTypeDescriptionV3Protos {
       supportedDocflows_ = emptyIntList();
       functions_ = java.util.Collections.emptyList();
       universalMessagesStartDate_ = "";
+      documentClass_ = "";
     }
 
     public static final com.google.protobuf.Descriptors.Descriptor
@@ -411,6 +429,55 @@ public final class DocumentTypeDescriptionV3Protos {
       }
     }
 
+    public static final int DOCUMENTCLASS_FIELD_NUMBER = 11;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object documentClass_ = "";
+    /**
+     * <code>optional string DocumentClass = 11;</code>
+     * @return Whether the documentClass field is set.
+     */
+    @java.lang.Override
+    public boolean hasDocumentClass() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <code>optional string DocumentClass = 11;</code>
+     * @return The documentClass.
+     */
+    @java.lang.Override
+    public java.lang.String getDocumentClass() {
+      java.lang.Object ref = documentClass_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        if (bs.isValidUtf8()) {
+          documentClass_ = s;
+        }
+        return s;
+      }
+    }
+    /**
+     * <code>optional string DocumentClass = 11;</code>
+     * @return The bytes for documentClass.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDocumentClassBytes() {
+      java.lang.Object ref = documentClass_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        documentClass_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -465,6 +532,9 @@ public final class DocumentTypeDescriptionV3Protos {
       if (((bitField0_ & 0x00000008) != 0)) {
         com.google.protobuf.GeneratedMessage.writeString(output, 10, universalMessagesStartDate_);
       }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 11, documentClass_);
+      }
       getUnknownFields().writeTo(output);
     }
 
@@ -499,6 +569,9 @@ public final class DocumentTypeDescriptionV3Protos {
       }
       if (((bitField0_ & 0x00000008) != 0)) {
         size += com.google.protobuf.GeneratedMessage.computeStringSize(10, universalMessagesStartDate_);
+      }
+      if (((bitField0_ & 0x00000010) != 0)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(11, documentClass_);
       }
       size += getUnknownFields().getSerializedSize();
       memoizedSize = size;
@@ -539,6 +612,11 @@ public final class DocumentTypeDescriptionV3Protos {
         if (!getUniversalMessagesStartDate()
             .equals(other.getUniversalMessagesStartDate())) return false;
       }
+      if (hasDocumentClass() != other.hasDocumentClass()) return false;
+      if (hasDocumentClass()) {
+        if (!getDocumentClass()
+            .equals(other.getDocumentClass())) return false;
+      }
       if (!getUnknownFields().equals(other.getUnknownFields())) return false;
       return true;
     }
@@ -574,6 +652,10 @@ public final class DocumentTypeDescriptionV3Protos {
       if (hasUniversalMessagesStartDate()) {
         hash = (37 * hash) + UNIVERSALMESSAGESSTARTDATE_FIELD_NUMBER;
         hash = (53 * hash) + getUniversalMessagesStartDate().hashCode();
+      }
+      if (hasDocumentClass()) {
+        hash = (37 * hash) + DOCUMENTCLASS_FIELD_NUMBER;
+        hash = (53 * hash) + getDocumentClass().hashCode();
       }
       hash = (29 * hash) + getUnknownFields().hashCode();
       memoizedHashCode = hash;
@@ -718,6 +800,7 @@ public final class DocumentTypeDescriptionV3Protos {
         }
         bitField0_ = (bitField0_ & ~0x00000010);
         universalMessagesStartDate_ = "";
+        documentClass_ = "";
         return this;
       }
 
@@ -784,6 +867,10 @@ public final class DocumentTypeDescriptionV3Protos {
         if (((from_bitField0_ & 0x00000020) != 0)) {
           result.universalMessagesStartDate_ = universalMessagesStartDate_;
           to_bitField0_ |= 0x00000008;
+        }
+        if (((from_bitField0_ & 0x00000040) != 0)) {
+          result.documentClass_ = documentClass_;
+          to_bitField0_ |= 0x00000010;
         }
         result.bitField0_ |= to_bitField0_;
       }
@@ -853,6 +940,11 @@ public final class DocumentTypeDescriptionV3Protos {
         if (other.hasUniversalMessagesStartDate()) {
           universalMessagesStartDate_ = other.universalMessagesStartDate_;
           bitField0_ |= 0x00000020;
+          onChanged();
+        }
+        if (other.hasDocumentClass()) {
+          documentClass_ = other.documentClass_;
+          bitField0_ |= 0x00000040;
           onChanged();
         }
         this.mergeUnknownFields(other.getUnknownFields());
@@ -947,6 +1039,11 @@ public final class DocumentTypeDescriptionV3Protos {
                 bitField0_ |= 0x00000020;
                 break;
               } // case 82
+              case 90: {
+                documentClass_ = input.readBytes();
+                bitField0_ |= 0x00000040;
+                break;
+              } // case 90
               default: {
                 if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                   done = true; // was an endgroup tag
@@ -1564,6 +1661,86 @@ public final class DocumentTypeDescriptionV3Protos {
         if (value == null) { throw new NullPointerException(); }
         universalMessagesStartDate_ = value;
         bitField0_ |= 0x00000020;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object documentClass_ = "";
+      /**
+       * <code>optional string DocumentClass = 11;</code>
+       * @return Whether the documentClass field is set.
+       */
+      public boolean hasDocumentClass() {
+        return ((bitField0_ & 0x00000040) != 0);
+      }
+      /**
+       * <code>optional string DocumentClass = 11;</code>
+       * @return The documentClass.
+       */
+      public java.lang.String getDocumentClass() {
+        java.lang.Object ref = documentClass_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          if (bs.isValidUtf8()) {
+            documentClass_ = s;
+          }
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>optional string DocumentClass = 11;</code>
+       * @return The bytes for documentClass.
+       */
+      public com.google.protobuf.ByteString
+          getDocumentClassBytes() {
+        java.lang.Object ref = documentClass_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          documentClass_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>optional string DocumentClass = 11;</code>
+       * @param value The documentClass to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDocumentClass(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        documentClass_ = value;
+        bitField0_ |= 0x00000040;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string DocumentClass = 11;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDocumentClass() {
+        documentClass_ = getDefaultInstance().getDocumentClass();
+        bitField0_ = (bitField0_ & ~0x00000040);
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>optional string DocumentClass = 11;</code>
+       * @param value The bytes for documentClass to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDocumentClassBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        documentClass_ = value;
+        bitField0_ |= 0x00000040;
         onChanged();
         return this;
       }
@@ -2392,16 +2569,17 @@ public final class DocumentTypeDescriptionV3Protos {
       "\n/Documents/Types/DocumentTypeDescriptio" +
       "nV3.proto\022 Diadoc.Api.Proto.Documents.Ty" +
       "pes\032/Documents/Types/DocumentTypeDescrip" +
-      "tionV2.proto\"\341\001\n\031DocumentTypeDescription" +
+      "tionV2.proto\"\370\001\n\031DocumentTypeDescription" +
       "V3\022\014\n\004Name\030\001 \002(\t\022\r\n\005Title\030\002 \002(\t\022\031\n\021Suppo" +
       "rtedDocflows\030\003 \003(\005\022\037\n\027RequiresFnsRegistr" +
       "ation\030\004 \002(\010\022G\n\tFunctions\030\t \003(\01324.Diadoc." +
       "Api.Proto.Documents.Types.DocumentFuncti" +
       "onV2\022\"\n\032UniversalMessagesStartDate\030\n \002(\t" +
-      "\"p\n\032GetDocumentTypesResponseV3\022R\n\rDocume" +
-      "ntTypes\030\001 \003(\0132;.Diadoc.Api.Proto.Documen" +
-      "ts.Types.DocumentTypeDescriptionV3B!B\037Do" +
-      "cumentTypeDescriptionV3Protos"
+      "\022\025\n\rDocumentClass\030\013 \001(\t\"p\n\032GetDocumentTy" +
+      "pesResponseV3\022R\n\rDocumentTypes\030\001 \003(\0132;.D" +
+      "iadoc.Api.Proto.Documents.Types.Document" +
+      "TypeDescriptionV3B!B\037DocumentTypeDescrip" +
+      "tionV3Protos"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -2413,7 +2591,7 @@ public final class DocumentTypeDescriptionV3Protos {
     internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTypeDescriptionV3_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_Diadoc_Api_Proto_Documents_Types_DocumentTypeDescriptionV3_descriptor,
-        new java.lang.String[] { "Name", "Title", "SupportedDocflows", "RequiresFnsRegistration", "Functions", "UniversalMessagesStartDate", });
+        new java.lang.String[] { "Name", "Title", "SupportedDocflows", "RequiresFnsRegistration", "Functions", "UniversalMessagesStartDate", "DocumentClass", });
     internal_static_Diadoc_Api_Proto_Documents_Types_GetDocumentTypesResponseV3_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_Diadoc_Api_Proto_Documents_Types_GetDocumentTypesResponseV3_fieldAccessorTable = new
